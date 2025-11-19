@@ -1,0 +1,56 @@
+{
+  "db_name": "SQLite",
+  "query": "SELECT u.user_id, ut.typ, u.name, u.email, pa.pwd, pa.pwd_salt as \"pwd_salt: uuid::Uuid\", pa.token_salt as \"token_salt: uuid::Uuid\"\n            FROM users u\n            INNER JOIN user_type ut ON u.user_type_serial_id = ut.serial_id\n            INNER JOIN password_auth pa ON u.serial_id = pa.user_serial_id\n            WHERE u.email = ? \n            LIMIT 1;",
+  "describe": {
+    "columns": [
+      {
+        "name": "user_id",
+        "ordinal": 0,
+        "type_info": "Text"
+      },
+      {
+        "name": "typ",
+        "ordinal": 1,
+        "type_info": "Text"
+      },
+      {
+        "name": "name",
+        "ordinal": 2,
+        "type_info": "Text"
+      },
+      {
+        "name": "email",
+        "ordinal": 3,
+        "type_info": "Text"
+      },
+      {
+        "name": "pwd",
+        "ordinal": 4,
+        "type_info": "Text"
+      },
+      {
+        "name": "pwd_salt: uuid::Uuid",
+        "ordinal": 5,
+        "type_info": "Blob"
+      },
+      {
+        "name": "token_salt: uuid::Uuid",
+        "ordinal": 6,
+        "type_info": "Blob"
+      }
+    ],
+    "parameters": {
+      "Right": 1
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "acec08e3ca782270ed3b8d5eb9780fcb5a53351d983cc7064b82b2b13df44063"
+}

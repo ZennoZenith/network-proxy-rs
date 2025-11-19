@@ -1,0 +1,12 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO password_auth (user_serial_id, pwd, pwd_salt, ctime, mtime) values (?, ?, ?, ?, ?)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": []
+  },
+  "hash": "3da9cfbb21b5d86f086450081ae7668a7573b834a20264980f9dedc23cd79942"
+}

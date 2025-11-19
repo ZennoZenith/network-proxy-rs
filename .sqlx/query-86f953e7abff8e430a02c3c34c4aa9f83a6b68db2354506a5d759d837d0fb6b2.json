@@ -1,0 +1,20 @@
+{
+  "db_name": "SQLite",
+  "query": "INSERT INTO users (user_id, name, email, ctime, mtime) \n                VALUES (?, ?, ?, ?, ?) \n            RETURNING serial_id;",
+  "describe": {
+    "columns": [
+      {
+        "name": "serial_id",
+        "ordinal": 0,
+        "type_info": "Integer"
+      }
+    ],
+    "parameters": {
+      "Right": 5
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "86f953e7abff8e430a02c3c34c4aa9f83a6b68db2354506a5d759d837d0fb6b2"
+}

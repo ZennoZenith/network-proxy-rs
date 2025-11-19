@@ -1,0 +1,6 @@
+.jj/
+**/.env
+target/
+temp/
+db/password.txt
+data.db*
