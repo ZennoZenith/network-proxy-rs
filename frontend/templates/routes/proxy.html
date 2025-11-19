@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    {% include "fragmants/head.html" %}
+
+    <script
+      src="/static/js/build/routes/proxy/index.js"
+      type="module"
+    ></script>
+
+    <title>Proxy Hosts</title>
+  </head>
+  <body>
+    {% include "fragmants/navbar.html" %}
+    <h1 class="p-4 font-bold text-xl">Proxy Hosts</h1>
+    <main class="mx-4 md:mx-8 border border-base-content/50 grid gap-2">
+      <div class="py-4">
+        Search
+        <input type="text" class="input">
+
+        <button class="btn btn-primary ml-4 mt-4">
+          Add proxy host
+        </button>
+
+        <form>
+          <div>
+            <label>Domain names<input type="text" class="input"></label>
+            <label>Scheme<input type="text" class="input" value="http"></label>
+            <label>Forward hostname/IP
+              <input
+                type="text"
+                class="input"
+                value="example.com"
+              ></label>
+            <label>Forward port
+              <input
+                type="text"
+                class="input"
+                value="3000"
+              ></label>
+            <label>Access List
+              <input
+                type="text"
+                class="input"
+                value="3000"
+              ></label>
+            <label>Cache assets<input type="checkbox" class="toggle"></label>
+            <label>Block Common Exploit<input
+                type="checkbox"
+                class="toggle"
+              ></label>
+            <label>Websocket support<input
+                type="checkbox"
+                class="toggle"
+              ></label>
+          </div>
+
+          <div>
+            <label>Path<input type="text" class="input"></label>
+            <label>Forward hostname/IP
+              <input
+                type="text"
+                class="input"
+                value="example.com"
+              ></label>
+            <label>Forward port
+              <input
+                type="text"
+                class="input"
+                value="3000"
+              ></label>
+          </div>
+
+          <div>
+            ssl certificate
+
+            <label>Force Ssl<input
+                type="checkbox"
+                class="toggle"
+              ></label>
+
+            <label>HTTP/2 support<input
+                type="checkbox"
+                class="toggle"
+              ></label>
+
+            <label>HSTS enabled<input
+                type="checkbox"
+                class="toggle"
+              ></label>
+            <label>HSTS subdomains<input
+                type="checkbox"
+                class="toggle"
+              ></label>
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-6 gap-1 border-t border-b border-base-content/50">
+        <div class="uppercase">Source</div>
+        <div class="uppercase">Destination</div>
+        <div class="uppercase">Ssl</div>
+        <div class="uppercase">Access</div>
+        <div class="uppercase">Status</div>
+        <div class="uppercase"></div>
+      </div>
+      <div class="grid grid-cols-6 gap-1">
+        <div class="">Domain</div>
+        <div class="">Destination address</div>
+        <div class="">HTTP ONLY</div>
+        <div class="">Public</div>
+        <div class="">Online</div>
+        <div class="">...</div>
+      </div>
+    </main>
+    {% include "fragmants/footer.html" %}
+  </body>
+</html>

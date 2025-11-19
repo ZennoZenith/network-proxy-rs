@@ -4,7 +4,7 @@
     {% include "fragmants/head.html" %}
 
     <script
-      src="/static/js/build/routes/dashboard/dashboard.js"
+      src="/static/js/build/routes/dashboard/index.js"
       type="module"
     ></script>
 
@@ -12,16 +12,108 @@
   </head>
   <body>
     {% include "fragmants/navbar.html" %}
-    <main class="p-8 md:p-16 grid gap-8">
-      <p>
-        <a class="text-primary underline" href="/login">Login</a>
-      </p>
-      <p>
-        <a class="text-primary underline" href="/register">Register</a>
-      </p>
-      <p>
-        <a class="text-primary underline" href="/dashboard">Dashboard</a>
-      </p>
+    <main class="p-4 md:p-8 grid gap-8">
+      <h1 class="font-bold text-xl">Dashboard</h1>
+
+      <div class="grid gap-4 grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <a
+          class="bg-base-200 border border-base-300 p-4 rounded-xl flex gap-2 items-center hover:bg-primary transition-colors"
+          href="/proxy"
+        >
+          <div class="bg-success text-success-content rounded p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tabler-icon tabler-icon-bolt"
+            >
+              <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11"></path>
+            </svg>
+          </div>
+          <div class="grow">0 Proxy hosts</div>
+        </a>
+        <a
+          class="bg-base-200 border border-base-300 p-4 rounded-xl flex gap-2 items-center hover:bg-primary transition-colors"
+          href="/redirection"
+        >
+          <div class="bg-warning text-warning-content rounded p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tabler-icon tabler-icon-arrows-cross"
+            >
+              <path d="M16 4h4v4"></path>
+              <path d="M15 9l5 -5"></path>
+              <path d="M4 20l5 -5"></path>
+              <path d="M16 20h4v-4"></path>
+              <path d="M4 4l16 16"></path>
+            </svg>
+          </div>
+          <div class="grow">0 Redirection hosts</div>
+        </a>
+        <a
+          class="bg-base-200 border border-base-300 p-4 rounded-xl flex gap-2 items-center hover:bg-primary transition-colors"
+          href="/stream"
+        >
+          <div class="bg-info text-info-content rounded p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tabler-icon tabler-icon-disc"
+            >
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              <path d="M7 12a5 5 0 0 1 5 -5"></path>
+              <path d="M12 17a5 5 0 0 0 5 -5"></path>
+            </svg>
+          </div>
+          <div class="grow">0 Stream hosts</div>
+        </a>
+        <a
+          class="bg-base-200 border border-base-300 p-4 rounded-xl flex gap-2 items-center hover:bg-primary transition-colors"
+          href="/404-host"
+        >
+          <div class="bg-error text-error-content rounded p-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="tabler-icon tabler-icon-bolt-off"
+            >
+              <path d="M3 3l18 18"></path>
+              <path d="M15.212 15.21l-4.212 5.79v-7h-6l3.79 -5.21m1.685 -2.32l2.525 -3.47v6m1 1h5l-2.104 2.893">
+              </path>
+            </svg>
+          </div>
+          <div class="grow">0 404 hosts</div>
+        </a>
+      </div>
     </main>
     {% include "fragmants/footer.html" %}
   </body>

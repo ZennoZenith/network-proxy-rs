@@ -1,6 +1,7 @@
-<nav class="navbar bg-base-100 shadow-sm">
+<nav class="navbar border-b-2 border-base-200">
   <div class="flex-1">
-    <a class="btn btn-ghost text-xl" href="/">Network Proxy</a>
+    <a class="btn btn-ghost rounded-lg hover:bg-primary text-xl" href="/"
+    >Network Proxy</a>
   </div>
   <div class="flex-none">
     <ul class="menu menu-horizontal px-1">
@@ -35,8 +36,128 @@
         </theme-toggle>
       </li>
 
-      <li><a href="/showcases">Showcase</a></li>
       <li><a href="/login">Login</a></li>
     </ul>
   </div>
+</nav>
+
+<nav class="flex border-b-2 border-base-200 h-14 items-center px-2">
+  <ul class="flex">
+    <li>
+      <a class="btn btn-ghost rounded-lg" href="/dashboard">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="tabler-icon tabler-icon-home"
+        >
+          <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+          <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+          <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+        </svg>
+        Dashboard
+      </a>
+    </li>
+    <li>
+      <details class="dropdown">
+        <summary class="btn btn-ghost rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="tabler-icon tabler-icon-device-desktop"
+          >
+            <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z">
+            </path>
+            <path d="M7 20h10"></path>
+            <path d="M9 16v4"></path>
+            <path d="M15 16v4"></path>
+          </svg>
+          Hosts
+          <svg
+            class="-mt-0.5"
+            fill="currentColor"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            width="12"
+            height="12"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+            </g>
+            <g id="SVGRepo_iconCarrier">
+              <title>dropdown</title>
+              <path d="M18.813 11.406l-7.906 9.906c-0.75 0.906-1.906 0.906-2.625 0l-7.906-9.906c-0.75-0.938-0.375-1.656 0.781-1.656h16.875c1.188 0 1.531 0.719 0.781 1.656z">
+              </path>
+            </g>
+          </svg>
+        </summary>
+        <ul class="menu dropdown-content bg-base-200 rounded z-1 w-52 p-2 shadow-sm">
+          <li><a href="/proxy">Proxy Hosts</a></li>
+          <li><a href="/redirection">Redirection Hosts</a></li>
+          <li><a href="/stream">Streams</a></li>
+          <li><a href="/404-host">404 Hosts</a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <a class="btn btn-ghost rounded-lg" href="/certificates">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="tabler-icon tabler-icon-shield"
+        >
+          <path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3">
+          </path>
+        </svg>
+        Certificates
+      </a>
+    </li>
+    <li>
+      <a class="btn btn-ghost rounded-lg" href="/settings">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="tabler-icon tabler-icon-settings"
+        >
+          <path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z">
+          </path>
+          <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+        </svg>
+        Settings
+      </a>
+    </li>
+  </ul>
 </nav>
